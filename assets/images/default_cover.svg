@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 360">
+  <defs>
+    <linearGradient id="g" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#8B3A3A"/>
+      <stop offset="1" stop-color="#5C1F1F"/>
+    </linearGradient>
+  </defs>
+  <rect width="240" height="360" fill="url(#g)"/>
+  <rect x="22" y="22" width="196" height="316" fill="none" stroke="#C9A961" stroke-width="1.5"/>
+  <rect x="32" y="32" width="176" height="296" fill="none" stroke="#C9A961" stroke-width="0.5" opacity="0.5"/>
+  <text x="120" y="170" font-family="serif" font-size="64" fill="#C9A961" text-anchor="middle" font-weight="bold">書</text>
+  <text x="120" y="210" font-family="serif" font-size="20" fill="#C9A961" text-anchor="middle" letter-spacing="6">BOOK</text>
+  <text x="120" y="320" font-family="serif" font-size="11" fill="#C9A961" text-anchor="middle" letter-spacing="2" opacity="0.7">拾光書架</text>
+</svg>
