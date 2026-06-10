@@ -127,6 +127,25 @@ function url(string $path = ''): string
     return $path;
 }
 
+/**
+ * 產生資源 URL (CSS/JS/圖片/上傳檔)
+ * 會自動加上 BASE_URL 前綴，讓子目錄 (如 /admin/) 也能正確載入
+ */
+function asset(string $path): string
+{
+    return BASE_URL . '/' . ltrim($path, '/');
+}
+
+/**
+ * 顯示資料庫儲存的相對路徑 (assets/... 或 uploads/...)
+ * 已自動加上 BASE_URL 前綴
+ */
+function img_src(?string $relPath, string $fallback = 'assets/images/default_cover.svg'): string
+{
+    if ($relPath) return e(asset($relPath));
+    return e(asset($fallback));
+}
+
 function status_label(string $s): string
 {
     return ['want'=>'想讀','reading'=>'閱讀中','finished'=>'已讀完'][$s] ?? $s;

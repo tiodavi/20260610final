@@ -70,7 +70,7 @@ require_once __DIR__ . '/includes/header.php';
       <label>封面圖片</label>
       <input type="file" name="cover_image" accept="image/*" data-preview="#coverPrev">
       <div class="form-hint">支援 JPG / PNG / GIF / WebP，最大 <?= MAX_UPLOAD_MB ?> MB</div>
-      <img id="coverPrev" src="assets/images/default_cover.svg" alt="預覽" style="max-width:160px; margin-top:10px; border-radius:4px; box-shadow:var(--shadow);">
+      <img id="coverPrev" src="<?= asset('assets/images/default_cover.svg') ?>" alt="預覽" style="max-width:160px; margin-top:10px; border-radius:4px; box-shadow:var(--shadow);">
     </div>
     <div class="form-row">
       <div class="form-group">

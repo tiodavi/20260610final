@@ -52,7 +52,7 @@ require_once __DIR__ . '/../includes/header.php';
       <tr>
         <td><?= (int)$b['id'] ?></td>
         <td>
-          <img src="<?= e($b['cover_image'] ?: 'assets/images/default_cover.svg') ?>" style="width:40px; height:56px; object-fit:cover; border-radius:3px; box-shadow:var(--shadow-sm);">
+          <img src="<?= img_src($b['cover_image']) ?>" style="width:40px; height:56px; object-fit:cover; border-radius:3px; box-shadow:var(--shadow-sm);">
         </td>
         <td><a href="../book_detail.php?id=<?= (int)$b['id'] ?>"><?= e($b['title']) ?></a></td>
         <td><?= e($b['author']) ?></td>

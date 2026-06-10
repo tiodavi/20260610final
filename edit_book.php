@@ -88,7 +88,7 @@ require_once __DIR__ . '/includes/header.php';
       <label>封面圖片</label>
       <input type="file" name="cover_image" accept="image/*" data-preview="#coverPrev">
       <div class="form-hint">留空表示不變更</div>
-      <img id="coverPrev" src="<?= e($book['cover_image'] ?: 'assets/images/default_cover.svg') ?>" alt="預覽" style="max-width:160px; margin-top:10px; border-radius:4px; box-shadow:var(--shadow);">
+      <img id="coverPrev" src="<?= img_src($book['cover_image']) ?>" alt="預覽" style="max-width:160px; margin-top:10px; border-radius:4px; box-shadow:var(--shadow);">
       <?php if ($book['cover_image']): ?>
         <label style="margin-top:8px; font-weight:400; font-size:13px;">
           <input type="checkbox" name="remove_cover" value="1"> 移除目前封面

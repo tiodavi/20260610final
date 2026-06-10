@@ -59,9 +59,9 @@ require_once __DIR__ . '/includes/header.php';
 <div class="book-detail">
   <div class="book-detail-cover">
     <?php if ($book['cover_image']): ?>
-      <img src="<?= e($book['cover_image']) ?>" alt="<?= e($book['title']) ?>">
+      <img src="<?= img_src($book['cover_image']) ?>" alt="<?= e($book['title']) ?>">
     <?php else: ?>
-      <img src="assets/images/default_cover.svg" alt="預設封面">
+      <img src="<?= asset('assets/images/default_cover.svg') ?>" alt="預設封面">
     <?php endif; ?>
   </div>
 
@@ -140,7 +140,7 @@ require_once __DIR__ . '/includes/header.php';
       <article class="review-item">
         <div class="review-head">
           <div class="review-user">
-            <span class="avatar-sm" style="background-image:url('<?= e($r['avatar'] ?: 'assets/images/default_avatar.svg') ?>')"></span>
+            <span class="avatar-sm" style="background-image:url('<?= img_src($r['avatar'], 'assets/images/default_avatar.svg') ?>')"></span>
             <div>
               <strong><?= e($r['display_name']) ?></strong>
               <small><?= e(time_ago($r['created_at'])) ?></small>

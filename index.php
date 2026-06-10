@@ -73,9 +73,9 @@ require_once __DIR__ . '/includes/header.php';
       <a href="book_detail.php?id=<?= (int)$b['id'] ?>" class="book-cover">
         <span class="book-status <?= e($b['status']) ?>"><?= e(status_label($b['status'])) ?></span>
         <?php if ($b['cover_image']): ?>
-          <img src="<?= e($b['cover_image']) ?>" alt="<?= e($b['title']) ?>">
+          <img src="<?= img_src($b['cover_image']) ?>" alt="<?= e($b['title']) ?>">
         <?php else: ?>
-          <img src="assets/images/default_cover.svg" alt="預設封面">
+          <img src="<?= asset('assets/images/default_cover.svg') ?>" alt="預設封面">
         <?php endif; ?>
       </a>
       <div class="book-body">
@@ -120,9 +120,9 @@ require_once __DIR__ . '/includes/header.php';
         <a href="book_detail.php?id=<?= (int)$b['id'] ?>" class="book-cover">
           <span class="book-status <?= e($b['status']) ?>"><?= e(status_label($b['status'])) ?></span>
           <?php if ($b['cover_image']): ?>
-            <img src="<?= e($b['cover_image']) ?>" alt="<?= e($b['title']) ?>">
+            <img src="<?= img_src($b['cover_image']) ?>" alt="<?= e($b['title']) ?>">
           <?php else: ?>
-            <img src="assets/images/default_cover.svg" alt="預設封面">
+            <img src="<?= asset('assets/images/default_cover.svg') ?>" alt="預設封面">
           <?php endif; ?>
         </a>
         <div class="book-body">

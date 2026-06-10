@@ -80,7 +80,7 @@ require_once __DIR__ . '/includes/header.php';
 <div style="display:grid; grid-template-columns:280px 1fr; gap:32px; align-items:start;">
   <!-- 左側卡片 -->
   <aside class="card text-center" style="position:sticky; top:90px;">
-    <div style="width:140px; height:140px; border-radius:50%; margin:0 auto 16px; background:url('<?= e($user['avatar'] ?: 'assets/images/default_avatar.svg') ?>') center/cover; border:4px solid var(--gold); box-shadow:var(--shadow);"></div>
+    <div style="width:140px; height:140px; border-radius:50%; margin:0 auto 16px; background:url('<?= img_src($user['avatar'], 'assets/images/default_avatar.svg') ?>') center/cover; border:4px solid var(--gold); box-shadow:var(--shadow);"></div>
     <h2 class="mb-0"><?= e($user['display_name']) ?></h2>
     <p class="text-muted" style="margin-top:4px;">@<?= e($user['username']) ?>
       <?php if ($user['role']==='admin'): ?><span class="badge badge-admin">管理員</span><?php endif; ?>
@@ -122,7 +122,7 @@ require_once __DIR__ . '/includes/header.php';
           <div class="form-group">
             <label>頭像</label>
             <input type="file" name="avatar" accept="image/*" data-preview="#avPrev">
-            <img id="avPrev" src="<?= e($user['avatar'] ?: 'assets/images/default_avatar.svg') ?>" style="width:80px; height:80px; border-radius:50%; object-fit:cover; margin-top:8px;">
+            <img id="avPrev" src="<?= img_src($user['avatar'], 'assets/images/default_avatar.svg') ?>" style="width:80px; height:80px; border-radius:50%; object-fit:cover; margin-top:8px;">
           </div>
           <button class="btn btn-primary">儲存</button>
         </form>
@@ -172,7 +172,7 @@ require_once __DIR__ . '/includes/header.php';
           <article class="book-card">
             <a href="book_detail.php?id=<?= (int)$b['id'] ?>" class="book-cover">
               <span class="book-status <?= e($b['status']) ?>"><?= e(status_label($b['status'])) ?></span>
-              <img src="<?= e($b['cover_image'] ?: 'assets/images/default_cover.svg') ?>" alt="">
+              <img src="<?= img_src($b['cover_image']) ?>" alt="">
             </a>
             <div class="book-body">
               <h3 class="book-title"><a href="book_detail.php?id=<?= (int)$b['id'] ?>"><?= e($b['title']) ?></a></h3>

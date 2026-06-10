@@ -9,7 +9,7 @@ $current = basename($_SERVER['SCRIPT_NAME']);
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title><?= e($page_title) ?> · <?= e(SITE_NAME) ?></title>
-<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="<?= asset('assets/css/style.css') ?>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;700;900&family=Noto+Sans+TC:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
@@ -41,7 +41,7 @@ $current = basename($_SERVER['SCRIPT_NAME']);
     <div class="user-area">
       <?php if ($u = current_user()): ?>
         <a href="profile.php" class="user-chip" title="我的檔案">
-          <span class="avatar-sm" style="background-image:url('<?= e($u['avatar'] ?: 'assets/images/default_avatar.svg') ?>')"></span>
+          <span class="avatar-sm" style="background-image:url('<?= e(asset($u['avatar'] ?: 'assets/images/default_avatar.svg')) ?>')"></span>
           <span class="user-name"><?= e($u['display_name']) ?></span>
           <?php if ($u['role']==='admin'): ?><span class="badge badge-admin">ADMIN</span><?php endif; ?>
         </a>
